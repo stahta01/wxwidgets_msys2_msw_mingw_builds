@@ -11,19 +11,19 @@ echo "_COMPILER_VERSION := ${_COMPILER_VERSION}"
 
 #####
 ## Cleanup start
-#cd $WXWIDGETS_FOLDER/build/msw || exit 3
-#mingw32-make -f makefile.gcc \
-  #CFG=mono \
-  #VENDOR=tims \
-  #COMPILER_VERSION=$_COMPILER_VERSION \
-  #CXXFLAGS=-std=gnu++11 \
-  #MONOLITHIC=1 SHARED=1 UNICODE=1 BUILD=release clean
-#mingw32-make -f makefile.gcc \
-  #CFG=mono \
-  #VENDOR=tims \
-  #COMPILER_VERSION=$_COMPILER_VERSION \
-  #CXXFLAGS=-std=gnu++11 \
-  #MONOLITHIC=1 SHARED=1 UNICODE=1 BUILD=debug clean
+cd $WXWIDGETS_FOLDER/build/msw || exit 3
+mingw32-make -f makefile.gcc \
+  CFG=mono \
+  VENDOR=tims \
+  COMPILER_VERSION=$_COMPILER_VERSION \
+  CXXFLAGS=-std=gnu++11 \
+  MONOLITHIC=1 SHARED=1 UNICODE=1 BUILD=release clean
+mingw32-make -f makefile.gcc \
+  CFG=mono \
+  VENDOR=tims \
+  COMPILER_VERSION=$_COMPILER_VERSION \
+  CXXFLAGS=-std=gnu++11 \
+  MONOLITHIC=1 SHARED=1 UNICODE=1 BUILD=debug clean
 ##
 ## Cleanup Finish
 #####
